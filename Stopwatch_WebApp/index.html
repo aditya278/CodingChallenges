@@ -1,0 +1,31 @@
+<!-- Web Challenge :Create a Stopwatch using Javascript and HTML with ​start, pause, reset button​.
+    Note : Try adding audio effects. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <audio id="clickAudio">
+        <source src="tick2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="watch">
+        <div class="screen">
+            <span id="hours">00</span> : 
+            <span id="minutes">00</span> : 
+            <span id="seconds">00</span>
+        </div>
+        <div class="buttons">
+            <button id="start" onclick="start();">START</button>
+            <button id="stop" onclick="stop();">STOP</button>
+            <button id="reset" onclick="reset();">RESET</button>
+        </div>
+    </div>
+</body>
+</html>
