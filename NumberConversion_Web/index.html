@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion App</title>
+</head>
+<body>
+    <div>
+        <div class="from">
+            <label for="format_f">From</label>
+            <select name="format_f" id="format_f">
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hex</option>
+                <option value="binary">Binary</option>
+            </select>
+        </div>
+        <div class="to">
+            <label for="format_t">To</label>
+            <select name="format_t" id="format_t">
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hex</option>
+                <option value="binary">Binary</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div id="calculator" class="calculator">
+        <label for="input" id="inputText">Enter __ Number: </label><br>
+        <input type="text" id="input"/><br>
+        <button type="submit" id="convertBtn" onclick="startConverstion();">Convert</button><br>
+        <label for="output" id="outputText">The __ form of above is: </label><br>
+        <input type="text" id="output" readonly/>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
