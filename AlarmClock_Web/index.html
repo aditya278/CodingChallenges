@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <input type="datetime-local" id="alarmTime"/>
+    <button onclick="setAlarm(this);" id="alarmBtn">Set Alarm</button>
+
+    <div id="alarmOptions" style="display: none;">
+        <button onclick="snooze();">Snooze 1 minute</button>
+        <button onclick="stopAlarm();">Stop Alarm</button>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
