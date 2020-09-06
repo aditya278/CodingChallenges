@@ -13,25 +13,9 @@ function isNarcissistic(num) {
     return (sum===num);
 }
 
-//Write a function to find the count of Narcissistic numbers in a list and remove them from the list
-function findNarcissistic(arr) {
-    var len = arr.length;
-    var finalArr = [];
-    var count = 0;
-    for(var i=0; i<len; i++) {
-        if(!isNarcissistic(arr[i])) {
-            finalArr.push(arr[i]);
-        }
-        else {
-            count++;
-        }
-    }
-    return [count, finalArr];
-}
-
 //Find if a given number is a Prime Number:
 function isPrime(num) {
-    for(var i=2; i<Math.sqrt(num); i++) {
+    for(var i=2; i<=Math.sqrt(num); i++) {
         if(num%i === 0) {
             return false;
         }
@@ -39,38 +23,48 @@ function isPrime(num) {
     return true;
 }
 
-function findPrime(arr) {
-    var len = arr.length;
-    var count = 0;
-    var finalArr = []
-    for(var i=0; i<len; i++) {
-        if(!isPrime(arr[i])) {
-            finalArr.push(arr[i]);
+function findPrimeAndNarc(arr) {
+    var primeCount = 0;
+    var narCount = 0;
+    var result = [];
+
+    for(var i=0; i<arr.length; i++) {
+        var isNumPrime = isPrime(arr[i]);
+        var isNumNarc = isNarcissistic(arr[i]);
+
+        if(isNumPrime && isNumNarc) {
+            primeCount++;
+            narCount++;
         }
-        else {
-            count++;
+        else if(isNumNarc) {
+            narCount++;
+        }
+        else if(isNumPrime) {
+            primeCount++;
+        }
+        else{
+            result.push(arr[i]);
         }
     }
-    
-    return [count, finalArr];
+
+    return [primeCount, narCount, result];
 }
 
 function main() {
-    var len = readlineSync.question("What is the lenght of array: ");
+    //var len = readlineSync.question("What is the lenght of array: ");
     var arr = [];
-    for(var i=0;i<len;i++) {
-        arr.push(parseInt(readlineSync.question('')));
-    }
-    //arr = [10,20,30,40,2,5,7,153,1024,1634,11];
+    // for(var i=0;i<len;i++) {
+    //     arr.push(parseInt(readlineSync.question('')));
+    // }
+    arr = [10,20,30,40,2,5,7,153,1024,1634,11];
+    //arr = [2,3,4,5,7,9];
     console.log(arr);
-    var primeResult = findPrime(arr);
-    arr = primeResult[1];
-    var narcResult = findNarcissistic(arr);
-    arr = narcResult[1];
+    
+    var result = findPrimeAndNarc(arr);
 
-    console.log("Prime Number Count: " + primeResult[0]);
-    console.log("Narcissistic Number Count: " + narcResult[0]);
-    console.log("The Updated array: " + arr);
+    console.log("Prime Number Count: " + result[0]);
+    console.log("Narcissistic Number Count: " + result[1]);
+    console.log("The Updated array: " + result[2]);
 }
 
 main();
