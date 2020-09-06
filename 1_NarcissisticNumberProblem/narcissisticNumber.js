@@ -51,7 +51,7 @@ function findPrimeAndNarc(arr) {
 }
 
 function main() {
-    //var len = readlineSync.question("What is the lenght of array: ");
+    var len = readlineSync.question("What is the lenght of array: ");
     var arr = [];
     for(var i=0;i<len;i++) {
         arr.push(parseInt(readlineSync.question('')));

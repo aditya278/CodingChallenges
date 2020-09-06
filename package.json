@@ -5,7 +5,22 @@
   "main": "",
   "scripts": {
     "challenge1": "node ./1_NarcissisticNumberProblem/narcissisticNumber.js",
-    "challenge4": "python3 -m http.server 8000"
+    "challenge3": "node ./3_NodeJSCmdLineInput/CommandLineInput.js",
+    "challenge5": "node ./5_XOREncryptionInJS/xorEncryption.js",
+    "challenge6": "node ./6_MultiplicationTable/multiplicationTable.js",
+    "challenge7": "node ./7_SplitPadProblem/splitPad.js",
+    "challenge10": "node ./10_BubbleSort/bubbleSort.js",
+    "challenge12": "node ./12_MagicMatrix/magicMatrix.js",
+    "challenge13": "node ./13_LogBaseNProblem/checkNumberInSeries.js",
+    "challenge14": "node ./14_CheckIdentityMatrix/checkIdentityMatrix.js",
+    "challenge15": "node ./15_CountNumbersInMatrix/countNumbersInMatrix.js",
+    "challenge16": "node ./16_NumberPattern/numberPattern.js",
+    "challenge17": "node ./17_CrackTheSeries-1/crackTheSeries1.js",
+    "challenge18": "node ./18_CrackTheSeries-2/crackTheSeries2.js",
+    "challenge20": "node ./20_MultiplyUsingLeftShift/multiplyNumber.js",
+    "challenge21": "node ./21_MultiplyWithoutAstrik/multiply.js",
+    "challenge22": "node ./22_BitRotationL&R/bitRotation.js",
+    "challenge23": "node ./23_RemoveDuplicateElements/removeDuplicateElements.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/aditya278/CodingChallenges/issues"
   },
-  "homepage": "https://github.com/aditya278/CodingChallenges#readme"
+  "homepage": "https://github.com/aditya278/CodingChallenges#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
