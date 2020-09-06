@@ -1,0 +1,17 @@
+html {
+    background-color: cyan;
+}
+
+.inputDiv {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.from, .to {
+    padding-right: 2.5rem;
+}
+
+.calculator {
+    padding: 2rem;
+}

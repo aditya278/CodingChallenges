@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversion App</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div>
+    <h1 style="margin-left: 2rem;">Number Converter</h1>
+    <div class="inputDiv">
         <div class="from">
             <label for="format_f">From</label>
             <select name="format_f" id="format_f">
@@ -27,10 +29,10 @@
     <br>
     <div id="calculator" class="calculator">
         <label for="input" id="inputText">Enter __ Number: </label><br>
-        <input type="text" id="input"/><br>
+        <input type="text" id="input" size="30"/><br>
         <button type="submit" id="convertBtn" onclick="startConverstion();">Convert</button><br>
         <label for="output" id="outputText">The __ form of above is: </label><br>
-        <input type="text" id="output" readonly/>
+        <input type="text" id="output" size="30" readonly/>
     </div>
     <script type="text/javascript" src="app.js"></script>
 </body>
