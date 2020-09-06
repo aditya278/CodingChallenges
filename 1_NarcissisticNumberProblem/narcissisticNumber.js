@@ -53,11 +53,10 @@ function findPrimeAndNarc(arr) {
 function main() {
     //var len = readlineSync.question("What is the lenght of array: ");
     var arr = [];
-    // for(var i=0;i<len;i++) {
-    //     arr.push(parseInt(readlineSync.question('')));
-    // }
-    arr = [10,20,30,40,2,5,7,153,1024,1634,11];
-    //arr = [2,3,4,5,7,9];
+    for(var i=0;i<len;i++) {
+        arr.push(parseInt(readlineSync.question('')));
+    }
+    //arr = [10,20,30,40,2,5,7,153,1024,1634,11];
     console.log(arr);
     
     var result = findPrimeAndNarc(arr);
