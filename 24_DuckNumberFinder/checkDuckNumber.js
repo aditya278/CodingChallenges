@@ -10,20 +10,17 @@ const readlinesync = require('readline-sync');
 
 function isDuckNumber(num) {
 
-    const regex = /^[-+]?[0-9]*$/;
+    const regex = /^\+?[0-9]*$/;
     if(!num.match(regex))
-        return false;
-
-    if(num[0] === '-')
         return false;
 
     let len = num.length;
     var i = 0;
-    while(i<len && num[i] === '0') {
+    while(i<len && num[i] === '0') {    //Worst Case: O(n)  ;   n -> len
         i++;
     }
 
-    for(; i<len; i++) {
+    for(; i<len; i++) {                 //Worst Case: O(n)  ;   n -> len
         if(num[i] === '0')
             return true;
     }
