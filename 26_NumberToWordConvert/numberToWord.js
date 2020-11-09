@@ -13,6 +13,8 @@ const convertToWord = (number) => {
 
     let finalWord = '';
     let len = number.toString().length;
+    if(len > 4)
+        return "Not Allowed";
     let unit = 0;
     let num = 0;
     let word = '';
@@ -54,3 +56,4 @@ console.log(convertToWord(9020));
 console.log(convertToWord('0012'));
 console.log(convertToWord('786'));
 console.log(convertToWord('38'));
+console.log(convertToWord(87654));
